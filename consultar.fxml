@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="764.0" prefWidth="1023.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConsultarController">
+    <stylesheets>
+        <URL value="@/css/style.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="1023.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="ACCIONES">
+            <items>
+              <MenuItem fx:id="itmenu" mnemonicParsing="false" onAction="#volverMenu" text="MENÚ" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <DatePicker fx:id="dpfechainicial" layoutX="80.0" layoutY="95.0" onAction="#seleccionarFechaInicial" />
+      <ComboBox fx:id="cbclientes" layoutX="443.0" layoutY="95.0" onAction="#llamarFiltro" prefWidth="150.0" />
+      <DatePicker fx:id="dpfechafinal" layoutX="695.0" layoutY="95.0" onAction="#seleccionarFechaFinal" />
+      <TableView fx:id="tbclientes" layoutX="24.0" layoutY="190.0" prefHeight="558.0" prefWidth="988.0">
+        <columns>
+          <TableColumn fx:id="colmatricula" prefWidth="147.0" text="MATRICULA" />
+          <TableColumn fx:id="colmarca" minWidth="3.0" prefWidth="182.0" text="MARCA" />
+            <TableColumn fx:id="colprecio" prefWidth="127.0" text="PRECIO" />
+            <TableColumn fx:id="colfechaalquiler" prefWidth="155.0" text="FECHA ALQUILER" />
+            <TableColumn fx:id="colfechaentrega" prefWidth="157.0" text="FECHA ENTREGA" />
+            <TableColumn fx:id="coltotal" prefWidth="219.0" text="TOTAL" />
+        </columns>
+      </TableView>
+      <Label layoutX="123.0" layoutY="58.0" text="FECHA INICIAL" />
+      <Label layoutX="487.0" layoutY="58.0" text="CLIENTES" />
+      <Label layoutX="725.0" layoutY="58.0" text="FECHA FINAL" />
+   </children>
+</AnchorPane>
